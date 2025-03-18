@@ -36,21 +36,27 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false" style="font-size: 20px;">
-              Documentation
+              Dropdown
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">API Integrations</a></li>
-              <li><a class="dropdown-item" href="#">Embedded AI Chatbots</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Cloud Datasets</a></li>
+              <li><a class="dropdown-item" href="#">email</a></li>
+              <li><a class="dropdown-item" href="#">instagram</a></li>
+              <li><a class="dropdown-item" href="#">X</a></li>
             </ul>
           </li>
         </ul>
-
-        <!-- Login Button -->
-        <a href="?page=login" class="btn btn-warning fw-bolder" style="border-radius: 20px;">Login Now Buddy <i class="bi bi-arrow-right "></i></a>
+        <?php
+        if (isset($_SESSION['user_id'])){
+          echo '<a href="?logout" class="btn btn-warning  fw-bolder style="border-radius: 20px;" >Logout <i class="bi bi-arrow-right"></i></a>';
+        }else{
+          echo '<a href="?page=login" class="btn btn-warning  fw-bolder style="border-radius: 20px;">Login<i class="bi bi-arrow-right"></i></a>';
+        }
+        if (isset($_GET['logout'])){
+          session_unset();
+          session_destroy();
+          header("Location: index.php?login");
+        }
+        ?>
       </div>
     </div>
   </nav>
