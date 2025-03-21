@@ -6,7 +6,7 @@
                 border-radius: 0 0 50px 10px;">
 
         <div>
-            <h1 style="font-size:60px;"><b>ChaiBot 🤖 Engine Update v.3 (vee-3)</b></h1>
+            <h1 style="font-size:60px;"><b>ChaiBot 🤖</b></h1>
             <p class="text-muted">Gunakan Futuristik AI chatbot di lokal server kamu,<br />Layanan Chat bot virtual yang bisa kamu gunain untuk bisnis sehari-hari bisa integrasi langsung di aplikasi kamu</p>
         </div>
     </div>
